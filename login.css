@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f7f8fa;
+}
+
+.top-bar {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo .highlight {
+  color: #00f0ff;
+}
+
+.top-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 5px 6px rgba(3, 3, 3, 0.4);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.phone-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.phone-row select, .phone-row input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.phone-row select {
+  width: 20%;
+}
+
+.phone-row input {
+  flex: 1;
+}
+
+.region-note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.region-note a {
+  color: #007aff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.verify-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.verify-row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.send-code {
+  padding: 12px;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-switcher {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tab-switcher button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-switcher .active {
+  border-color: #000;
+}
+
+.form-section {
+  display: none;
+  flex-direction: column;
+}
+
+.active-form {
+  display: flex;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  font-size: 13px;
+  text-align: right;
+  color: #007aff;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff2c55;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  left: 0;
+  z-index: 0;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #f2f2f2;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 40px;
+  position: relative;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;      /* Menyelaraskan logo dan teks secara vertikal */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+.social-btn .logo {
+  height: 20px;             /* Ukuran logo */
+  margin-right: 10px;       /* Jarak antara logo dan teks */
+}
+
+/* Opsional: Warna background sesuai platform */
+.social-btn.google {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.social-btn.facebook {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #ccc;
+}
+
+
+.bottom-text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bottom-text a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .top-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .social-btn {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .social-btn::before {
+    display: none;
+  }
+}

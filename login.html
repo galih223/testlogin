@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malindo Group - Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">Malindo Group</div>
+    <div class="top-links">
+      <a href="#">EN</a>
+      <a href="signup.html" class="login-link">Sign up</a>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Log in</h2>
+      <div class="tab-switcher">
+        <button id="email-tab" class="active">With Email</button>
+        <button id="phone-tab">With Phone</button>
+      </div>
+
+      <form id="email-form" class="form-section active-form">
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <a href="#" class="forgot-password">Forgot your password?</a>
+        <button type="submit" class="login-btn">Log in</button>
+      </form>
+
+      <form id="phone-form" class="form-section">
+        <div class="phone-row">
+          <select>
+            <option selected>+966</option>
+            <option>+1</option>
+            <option>+62</option>
+          </select>
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <div class="verify-row">
+          <input type="text" placeholder="Verification code" />
+          <button type="button" class="send-code">Send code</button>
+        </div>
+        <button type="submit" class="login-btn">Log in</button>
+      </form>
+
+      <div class="divider"><span>OR</span></div>
+       <button type="button" class="social-btn google">
+       <img src="gambar/google.png" alt="Google" class="logo">
+        Continue with Google
+       </button>
+       <button type="button" class="social-btn facebook">
+       <img src="gambar/facebook.png" alt="Facebook" class="logo">
+        Continue with Facebook
+       </button>
+       
+      <p class="bottom-text">
+        New to Malindo Group? <a href="signup.html">Sign up now</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const emailTab = document.getElementById("email-tab");
+    const phoneTab = document.getElementById("phone-tab");
+    const emailForm = document.getElementById("email-form");
+    const phoneForm = document.getElementById("phone-form");
+
+    emailTab.addEventListener("click", () => {
+      emailTab.classList.add("active");
+      phoneTab.classList.remove("active");
+      emailForm.classList.add("active-form");
+      phoneForm.classList.remove("active-form");
+    });
+
+    phoneTab.addEventListener("click", () => {
+      phoneTab.classList.add("active");
+      emailTab.classList.remove("active");
+      phoneForm.classList.add("active-form");
+      emailForm.classList.remove("active-form");
+    });
+  </script>
+</body>
+</html>

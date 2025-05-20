@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malindo Group - Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">Malindo Group</div>
+    <div class="top-links">
+      <a href="#">EN</a>
+      <a href="login.html" class="login-link">Log in</a>
+    </div>
+  </header>
+
+  <main class="signup-container">
+    <div class="signup-box">
+      <h2>Sign up now</h2>
+      <div class="tab-switcher">
+        <button id="email-tab">With Email</button>
+        <button id="phone-tab" class="active">With Phone</button>
+      </div>
+
+      <form id="phone-form" class="form-section active-form">
+        <div class="phone-row">
+          <select>
+            <option selected>+966</option>
+            <option>+1</option>
+            <option>+62</option>
+          </select>
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <p class="region-note">
+          You will be registered in <strong>Indonesia</strong>. <a href="#">Learn more</a> about the location.
+        </p>
+
+        <div class="verify-row">
+          <input type="text" placeholder="Verification code" />
+          <button type="button" class="send-code">Send code</button>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" /> Get emails with trends, news, promotions, recommendations and account updates from Malindo Group.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" required />
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, and confirm my age is 18+.
+          </label>
+        </div>
+
+        <button type="submit" class="create-btn">Create an account</button>
+      </form>
+
+      <form id="email-form" class="form-section">
+        <input type="email" placeholder="Email Address" required />
+        <p class="region-note">
+          You will be registered in <strong>Indonesia</strong>. <a href="#">Learn more</a> about the location.
+        </p>
+        <input type="password" placeholder="Password" required />
+         <div class="verify-row">
+          <input type="text" placeholder="Verification code" />
+          <button type="button" class="send-code">Send code</button>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" /> Get emails with trends, news, promotions, recommendations and account updates from Malindo Group.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" required />
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, and confirm my age is 18+.
+          </label>
+        </div>
+
+        <button type="submit" class="create-btn">Create an account</button>
+      </form>
+
+    <div class="divider"><span>OR</span></div>
+       <button type="button" class="social-btn google">
+       <img src="gambar/google.png" alt="Google" class="logo">
+        Continue with Google
+       </button>
+       <button type="button" class="social-btn facebook">
+       <img src="gambar/facebook.png" alt="Facebook" class="logo">
+        Continue with Facebook
+       </button>
+
+      <p class="bottom-text">
+        Already got an account? <a href="login.html">Log in</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const phoneTab = document.getElementById("phone-tab");
+    const emailTab = document.getElementById("email-tab");
+    const phoneForm = document.getElementById("phone-form");
+    const emailForm = document.getElementById("email-form");
+
+    phoneTab.addEventListener("click", () => {
+      phoneTab.classList.add("active");
+      emailTab.classList.remove("active");
+      phoneForm.classList.add("active-form");
+      emailForm.classList.remove("active-form");
+    });
+
+    emailTab.addEventListener("click", () => {
+      emailTab.classList.add("active");
+      phoneTab.classList.remove("active");
+      emailForm.classList.add("active-form");
+      phoneForm.classList.remove("active-form");
+    });
+  </script>
+</body>
+</html>
